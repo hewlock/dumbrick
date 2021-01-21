@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
-import highScores from './highScores';
+import score from './score';
+import scores from './scores';
 
 export default combineReducers({
-	highScores
+	score,
+	scores
 });

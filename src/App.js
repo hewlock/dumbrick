@@ -2,15 +2,17 @@ import React, { useMemo } from 'react';
 import { Provider as ReduxProvider } from 'react-redux';
 
 import {
-	BrowserRouter as Router,
-	Link,
+	BrowserRouter as Router, Link,
 	Route,
 	Switch,
 } from 'react-router-dom';
 
-import logo from './logo.svg';
-
 import './App.css';
+
+import Game from './screens/Game/Game';
+import HighScore from './screens/HighScore/HighScore';
+import MainMenu from './screens/MainMenu/MainMenu';
+import Scores from './screens/Scores/Scores';
 import configureStore from './configureStore';
 
 export default function App() {
@@ -20,48 +22,20 @@ export default function App() {
 		<ReduxProvider store={store}>
 			<Router>
 				<div>
-					<ul>
-						<li>
-							<Link to="/">Main Menu</Link>
-						</li>
-						<li>
-							<Link to="/game">New Game</Link>
-						</li>
-						<li>
-							<Link to="/score">High Scores</Link>
-						</li>
-						<li>
-							<Link to="/quit">Quit</Link>
-						</li>
-					</ul>
+					<Link to="/">Home</Link>
 				</div>
 				<Switch>
 					<Route exact path="/">
-						<div className="App">
-							<header className="App-header">
-								<img src={logo} className="App-logo" alt="logo" />
-								<p>
-									Edit <code>src/App.js</code> and save to reload.
-								</p>
-								<a
-									className="App-link"
-									href="https://reactjs.org"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Learn React
-								</a>
-							</header>
-						</div>
+						<MainMenu />
+					</Route>
+					<Route path="/scores">
+						<Scores />
+					</Route>
+					<Route path="/highscore">
+						<HighScore />
 					</Route>
 					<Route path="/game">
-						GAME
-					</Route>
-					<Route path="/score">
-						Scores
-					</Route>
-					<Route path="/quit">
-						quit
+						<Game />
 					</Route>
 				</Switch>
 			</Router>
