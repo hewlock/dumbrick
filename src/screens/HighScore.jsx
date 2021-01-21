@@ -1,10 +1,10 @@
 import React, {useCallback, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
-import {getScore, resetScore} from '../../ducks/score';
-import {addScore} from '../../ducks/scores';
+import {getScore} from '../ducks/score';
+import {addScore} from '../ducks/scores';
 
-export default function() {
+export default function HighScore() {
 	const score = useSelector(getScore);
 	const dispatch = useDispatch();
 	const [name, setName] = useState('');
@@ -12,12 +12,11 @@ export default function() {
 	const history = useHistory();
 	const handleSave = useCallback(() => {
 		dispatch(addScore(name, score));
-		dispatch(resetScore());
 		history.push('/scores');
 	}, [dispatch, name, score, history]);
 
 	return (
-		<div>
+		<div className="center">
 			<h1>New High Score</h1>
 			<p>Score: {score}</p>
 			<p>Name: {name}</p>

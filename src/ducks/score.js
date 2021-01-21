@@ -1,15 +1,15 @@
 const initialState = 0;
 
 const RESET_SCORE = 'score/RESET_SCORE';
-const SET_SCORE = 'score/SET_SCORE';
+const INCREMENT_SCORE = 'score/INCREMENT_SCORE';
 
 /**
  * Action Creators
  */
 
-export function setScore(value) {
+export function incrementScore(value) {
 	return {
-		type: SET_SCORE,
+		type: INCREMENT_SCORE,
 		payload: value,
 	}
 }
@@ -34,8 +34,8 @@ export function getScore(state) {
 
 export default function reducer(state = initialState, action) {
 	switch (action.type) {
-		case SET_SCORE:
-			return action.payload;
+		case INCREMENT_SCORE:
+			return state + action.payload;
 		case RESET_SCORE:
 			return 0;
 		default:

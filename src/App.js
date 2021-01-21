@@ -9,10 +9,10 @@ import {
 
 import './App.css';
 
-import Game from './screens/Game/Game';
-import HighScore from './screens/HighScore/HighScore';
-import MainMenu from './screens/MainMenu/MainMenu';
-import Scores from './screens/Scores/Scores';
+import Game from './screens/Game';
+import HighScore from './screens/HighScore';
+import MainMenu from './screens/MainMenu';
+import Scores from './screens/Scores';
 import configureStore from './configureStore';
 
 export default function App() {
@@ -21,9 +21,6 @@ export default function App() {
 	return (
 		<ReduxProvider store={store}>
 			<Router>
-				<div>
-					<Link to="/">Home</Link>
-				</div>
 				<Switch>
 					<Route exact path="/">
 						<MainMenu />

@@ -1,15 +1,16 @@
 import React, { useCallback } from 'react';
-import { Link} from 'react-router-dom';
-import logo from '../../logo.svg';
 
-export default function() {
+import Logo from '../Components/Logo';
+import {Link} from 'react-router-dom';
+
+export default function MainMenu() {
 	const handleQuit = useCallback(() => {
 		window.close();
 	}, []);
+
 	return (
-		<div>
-			<h1>Dumbrick</h1>
-			<img src={logo} className="App-logo" alt="logo" />
+		<div className="center">
+			<Logo />
 			<ul>
 				<li>
 					<Link to="/game">New Game</Link>
