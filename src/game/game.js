@@ -32,7 +32,7 @@ export default class Game {
 				this.ball.obj.velocity = math.multiply(
 					math.normalize(math.add(
 						math.normalize(this.ball.obj.velocity),
-						math.point((this.ball.obj.position.x - this.paddle.obj.position.x) / config.paddle.width, 0)
+						math.point((this.ball.obj.position.x - this.paddle.obj.position.x) / (config.paddle.width / 2), 0)
 					)),
 					config.ball.speed
 				);

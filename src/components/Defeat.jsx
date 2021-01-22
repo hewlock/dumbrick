@@ -12,15 +12,20 @@ function Defeat() {
 	const score = useSelector(getScore);
 	return (
 		<div className="modal">
-			<h1>
-				Defeat {score}
-			</h1>
 			<div>
-				{ score > lowScore  ? (
-					<Link to="/highscore">New High Score!</Link>
-				) : (
-					<Link to="/">Darn</Link>
-				)}
+				<h1>
+					You Lose!
+				</h1>
+				<p>
+					Score {score}
+				</p>
+				<p>
+					{ score > lowScore  ? (
+						<Link to="/highscore">New High Score!</Link>
+					) : (
+						<Link to="/">Try Again Loser</Link>
+					)}
+				</p>
 			</div>
 		</div>
 	);

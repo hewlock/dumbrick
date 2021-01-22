@@ -45,11 +45,12 @@ export default function GameField() {
 	}, [isPlaying]);
 
 	return (
-		<div className="flex-shrink-0">
+		<div className="flex-grow-1 flex-shrink-0">
 			<div
 				ref={containerRef}
 				style={{
-					border: '1px solid white',
+					border: '1px solid gray',
+					boxShadow: '0px 0px 25px grey',
 					height: `${config.field.height}px`,
 					overflow: 'hidden',
 					position: 'relative',

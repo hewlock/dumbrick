@@ -39,11 +39,24 @@
 
 body {
 	background-color: #282c34;
-	color: white;
+	color: lightgray;
+	font-family: 'Potta One', cursive;
 }
 
 h1 {
 	color: #61dafb;
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+input {
+	background-color: #383c44;
+	border: 1px solid gray;
+	color: lightgray;
+	font-family: 'Potta One', cursive;
+	font-size: 24px;
+	padding: 5px;
+	text-align: center;
 }
 
 ul {
@@ -60,9 +73,13 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	text-shadow: 0 0 15px white;
+}
+
 .modal {
 	align-items: center;
-	background: rgba(0,0,0,.5);
+	background: rgba(0,0,0,.75);
 	bottom: 0;
 	display: flex;
 	justify-content: center;
@@ -71,6 +88,7 @@ a {
 	right: 0;
 	text-align: center;
 	top: 0;
+	z-index: 100;
 }
 
 .center {

@@ -21,12 +21,9 @@ export default function Game() {
 	// TODO: create pause game state
 	return (
 		<>
-			<div className="flex">
-				<h1 className="center flex-grow-1">
-					Dumbrick
-				</h1>
-				<GameField key={`level-${level}`}/>
+			<div className="flex" style={{margin: '20px'}}>
 				<Score />
+				<GameField key={`level-${level}`}/>
 			</div>
 			<Loading />
 			<Complete />

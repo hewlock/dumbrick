@@ -7,12 +7,19 @@ const config = {
 		style: {
 			backgroundColor: 'white',
 			borderRadius: '10px',
+			boxShadow: '0px 0px 3px white',
+			zIndex: 1,
 		},
 		size: 10,
 		speed: 200,
 	},
 	bricks: {
-		color: 'red',
+		style: {
+			backgroundColor: 'red',
+			borderRadius: '2px',
+			boxShadow: '1px 1px 4px #282828',
+			zIndex: 1,
+		},
 		cols: 5,
 		height: 20,
 		offset: 100,
@@ -21,10 +28,15 @@ const config = {
 		width: 50,
 	},
 	paddle: {
-		color: 'blue',
+		style: {
+			backgroundColor: 'blue',
+			borderRadius: '2px',
+			boxShadow: '1px 1px 4px #282828',
+			zIndex: 1,
+		},
 		height: 20,
 		offset: 50,
-		speed: 100,
+		speed: 150,
 		width: 70,
 	},
 	particle: {
@@ -32,6 +44,7 @@ const config = {
 		style: {
 			backgroundColor: 'yellow',
 			borderRadius: '5px',
+			zIndex: 0,
 		},
 		count: 20,
 		life: 3,

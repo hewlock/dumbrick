@@ -3,11 +3,11 @@ import math from './math';
 import config from '../config';
 
 const {
-	color,
 	cols,
 	height,
 	offset,
 	space,
+	style,
 	width,
 } = config.bricks;
 
@@ -22,7 +22,7 @@ export default class Brick {
 				fHeight - offset - (row * (height + space))
 			),
 			size: math.size(width, height),
-			style: { backgroundColor: color }
+			style
 		});
 		this.obj.spawn(container);
 	}

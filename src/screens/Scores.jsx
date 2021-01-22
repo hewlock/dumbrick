@@ -21,7 +21,9 @@ export default function Scores() {
 					</li>
 				))}
 			</ul>
-			<Link to="/">Main Menu</Link>
+			<p>
+				<Link to="/">Main Menu</Link>
+			</p>
 		</div>
 	);
 }

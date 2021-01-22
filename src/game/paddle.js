@@ -6,11 +6,11 @@ const KEYCODE_LEFT = 37;
 const KEYCODE_RIGHT = 39;
 
 const {
-	color,
 	height,
-	width,
 	offset,
 	speed,
+	style,
+	width,
 } = config.paddle;
 
 const w2 = width / 2;
@@ -20,7 +20,7 @@ export default class Paddle {
 		this.obj = new Obj({
 			position: math.point(config.field.width / 2, offset),
 			size: math.size(width, height),
-			style: { backgroundColor: color }
+			style
 		});
 		this.obj.spawn(container);
 

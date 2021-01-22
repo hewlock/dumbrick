@@ -13,7 +13,7 @@ export default function MainMenu() {
 			<Logo />
 			<ul>
 				<li>
-					<Link to="/game">New Game</Link>
+					<Link to="/game">Play</Link>
 				</li>
 				<li>
 					<Link to="/scores">High Scores</Link>
