@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 
-import Complete from '../Components/Complete';
-import Defeat from '../Components/Defeat';
-import GameField from '../Components/GameField';
-import Loading from '../Components/Loading';
-import Score from '../Components/Score';
+import Complete from '../components/Complete';
+import Defeat from '../components/Defeat';
+import GameField from '../components/GameField';
+import Loading from '../components/Loading';
+import Score from '../components/Score';
 import {getLevel, resetGame} from '../ducks/game';
 import {resetScore} from '../ducks/score';
 import {useDispatch, useSelector} from 'react-redux';

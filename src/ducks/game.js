@@ -50,6 +50,10 @@ export function getIsComplete(state) {
 	return state.game.state === 'complete';
 }
 
+export function getIsPlaying(state) {
+	return state.game.state === 'playing';
+}
+
 export function getLoadingCount(state) {
 	return state.game.loadingCount;
 }
